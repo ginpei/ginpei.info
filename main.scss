@@ -22,8 +22,6 @@ section::after {
 	width: $tile-width * 3;
 }
 .tile {
-	border: solid transparent;
-
 	a {
 		text-decoration: none;
 	}
@@ -55,12 +53,9 @@ section::after {
 
 // UI: tile
 .ui-tile {
-	border-width: $tile-margin;
-	box-sizing: border-box;
 	float: left;
-	height: $tile-width;
+	margin: $tile-margin;
 	perspective: 300px;
-	width: $tile-width;
 
 	&-block {
 		height: 100%;
@@ -97,8 +92,8 @@ section::after {
 	}
 }
 @mixin ui-tile-sizedstyles($col-span, $row-span, $name:false) {
-	$width: $tile-width * $col-span;
-	$height: $tile-width * $row-span;
+	$width: $tile-width * $col-span - $tile-margin * 2;
+	$height: $tile-width * $row-span - $tile-margin * 2;
 	$radius: $height / 2;
 	$base-selector: ".ui-tile";
 	@if $name {
