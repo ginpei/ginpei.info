@@ -43,6 +43,9 @@ section::after {
 .tile:hover .tile-surface {
 	border-color: rgba(255,255,255,0.6);
 }
+.tile-surface--gray {
+	background-color: #ca7;
+}
 .tile-title {
 	font-size: 14px;;
 }
@@ -66,13 +69,13 @@ section::after {
 }
 .ui-tile-icon {
 	bottom: 0;
-	height: 50%;
+	max-height: 50%;
 	left: 0;
 	margin: auto;
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 50%;
+	max-width: 50%;
 }
 .ui-tile-title {
 	bottom: 0;
