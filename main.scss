@@ -96,7 +96,9 @@ section::after {
 		z-index: 1;
 	}
 }
-@mixin ui-tile-sizedstyles($width, $height, $name:false) {
+@mixin ui-tile-sizedstyles($col-span, $row-span, $name:false) {
+	$width: $tile-width * $col-span;
+	$height: $tile-width * $row-span;
 	$radius: $height / 2;
 	$base-selector: ".ui-tile";
 	@if $name {
@@ -138,6 +140,6 @@ section::after {
 		}
 	}
 }
-@include ui-tile-sizedstyles($tile-width  , $tile-width);
-@include ui-tile-sizedstyles($tile-width*2, $tile-width*2, "large");
-@include ui-tile-sizedstyles($tile-width*2, $tile-width  , "wide");
+@include ui-tile-sizedstyles(1, 1);
+@include ui-tile-sizedstyles(2, 2, "large");
+@include ui-tile-sizedstyles(2, 1  , "wide");
