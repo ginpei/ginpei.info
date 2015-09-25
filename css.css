@@ -1,0 +1,63 @@
+body {
+	font-family: sans-serif;
+}
+section {	
+}
+section > h1 {
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0 0 1em;
+}
+section::after {	
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.xxx-main {
+	margin: auto;
+	width: 300px;
+}
+.tile {
+	border: solid 2px transparent;
+	box-sizing: border-box;
+	float: left;
+	height: 100px;
+	width: 100px;
+}
+.tile a {
+	text-decoration: none;
+}
+.tile--large {
+	height: 200px;
+	width: 200px;
+}
+.tile--wide {
+	width: 200px;
+}
+.surface {
+	background-color: #006;
+	color: #fff;
+	font-family: sans-serif;
+}
+.tile:hover .surface {
+	border-color: rgba(255,255,255,0.6);
+}
+
+/* UI: tile */
+.ui-tile {
+	perspective: 100px;
+}
+.ui-tile-surface {
+	border: 2px transparent solid;
+	box-sizing: border-box;
+	height: 100%;
+	left: 0;
+	padding: 2px;
+	position: absolute;
+	top: 0;
+	transform-origin: center center -50px;
+	transition: transform 300ms;
+	width: 100%;
+	z-index: 1;
+}
