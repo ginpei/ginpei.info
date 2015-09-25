@@ -43,6 +43,9 @@ section::after {
 .tile:hover .tile-surface {
 	border-color: rgba(255,255,255,0.6);
 }
+.tile-title {
+	font-size: 14px;;
+}
 
 /* UI: tile */
 .ui-tile {
@@ -60,4 +63,18 @@ section::after {
 	transition: transform 300ms;
 	width: 100%;
 	z-index: 1;
+}
+.ui-tile-icon {
+	bottom: 0;
+	height: 50%;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+}
+.ui-tile-title {
+	bottom: 0;
+	position: absolute;
 }
