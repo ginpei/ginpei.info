@@ -43,11 +43,21 @@ section::after {
 .tile:hover .tile-surface {
 	border-color: rgba(255,255,255,0.6);
 }
+.tile-title {
+	font-size: 14px;;
+}
+
 .tile-surface--gray {
 	background-color: #ca7;
 }
-.tile-title {
-	font-size: 14px;;
+.tile-surface--white {
+	background-color: #fff;
+}
+.tile-surface--white {
+	color: #006;
+}
+.tile:hover .tile-surface--white {
+	border-color: rgba(0,0,0,0.2);
 }
 
 /* UI: tile */
