@@ -138,3 +138,13 @@ section::after {
 @include ui-tile-sizedstyles(1, 1);
 @include ui-tile-sizedstyles(2, 2, "large");
 @include ui-tile-sizedstyles(2, 1  , "wide");
+
+.is-msie {
+	.ui-tile-block {
+		animation: none !important;
+		transform: none !important;
+	}
+	.ui-tile-surface {
+		transform: none !important;
+	}
+}
