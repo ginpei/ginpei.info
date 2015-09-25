@@ -1,3 +1,6 @@
+$tile-margin: 2px;
+$tile-width: 100px;
+
 body {
 	font-family: sans-serif;
 }
@@ -16,24 +19,24 @@ section::after {
 
 .mainArea {
 	margin: auto;
-	width: 300px;
+	width: $tile-width * 3;
 }
 .tile {
-	border: solid 2px transparent;
+	border: solid $tile-margin transparent;
 	box-sizing: border-box;
 	float: left;
-	height: 100px;
-	width: 100px;
+	height: $tile-width;
+	width: $tile-width;
 
 	a {
 		text-decoration: none;
 	}
 	&--large {
-		height: 200px;
-		width: 200px;
+		height: $tile-width * 2;
+		width: $tile-width * 2;
 	}
 	&--wide {
-		width: 200px;
+		width: $tile-width * 2;
 	}
 	&-surface {
 		background-color: #006;
