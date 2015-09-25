@@ -155,4 +155,3 @@ section::after {
     transform: rotateX(90deg) translateZ(-50px); }
   60% {
     transform: rotateX(0deg) translateZ(-50px); } }
-
