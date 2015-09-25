@@ -100,7 +100,7 @@ section::after {
 	z-index: 1;
 }
 .ui-tile--rotate2 .ui-tile-block {
-	animation: 20s infinite tile-rotate2;
+	animation: tile-rotate2 20s infinite;
 }
 .ui-tile--rotate2 .ui-tile-surface:nth-child(1) {
 	transform: translateZ(100px);
