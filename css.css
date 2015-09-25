@@ -43,9 +43,6 @@ section::after {
 .tile-title {
   font-size: 14px; }
 
-/* .tile-surface--lightBrown { */
-/* 	background-color: #ca7;    */
-/* }                           */
 .tile-surface--white {
   background-color: #fff; }
 
@@ -55,7 +52,6 @@ section::after {
 .tile:hover .tile-surface--white {
   border-color: rgba(0, 0, 0, 0.2); }
 
-/* UI: tile */
 .ui-tile {
   perspective: 300px; }
 
