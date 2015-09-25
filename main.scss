@@ -22,21 +22,10 @@ section::after {
 	width: $tile-width * 3;
 }
 .tile {
-	border: solid $tile-margin transparent;
-	box-sizing: border-box;
-	float: left;
-	height: $tile-width;
-	width: $tile-width;
+	border: solid transparent;
 
 	a {
 		text-decoration: none;
-	}
-	&--large {
-		height: $tile-width * 2;
-		width: $tile-width * 2;
-	}
-	&--wide {
-		width: $tile-width * 2;
 	}
 	&-surface {
 		background-color: #006;
@@ -66,7 +55,12 @@ section::after {
 
 // UI: tile
 .ui-tile {
+	border-width: $tile-margin;
+	box-sizing: border-box;
+	float: left;
+	height: $tile-width;
 	perspective: 300px;
+	width: $tile-width;
 
 	&-block {
 		height: 100%;;
@@ -102,7 +96,7 @@ section::after {
 		z-index: 1;
 	}
 }
-@mixin ui-tile-sizedstyles($height, $name:false) {
+@mixin ui-tile-sizedstyles($width, $height, $name:false) {
 	$radius: $height / 2;
 	$base-selector: ".ui-tile";
 	@if $name {
@@ -111,6 +105,11 @@ section::after {
 	@else {
 		$name: "medium";
 		$root-selector: #{$base-selector};
+	}
+
+	#{$root-selector} {
+		height: $height;
+		width: $width;
 	}
 
 	#{$root-selector} {
@@ -139,5 +138,6 @@ section::after {
 		}
 	}
 }
-@include ui-tile-sizedstyles($tile-width);
-@include ui-tile-sizedstyles($tile-width * 2, "large");
+@include ui-tile-sizedstyles($tile-width  , $tile-width);
+@include ui-tile-sizedstyles($tile-width*2, $tile-width*2, "large");
+@include ui-tile-sizedstyles($tile-width*2, $tile-width  , "wide");
