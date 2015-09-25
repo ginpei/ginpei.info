@@ -72,7 +72,7 @@ section::after {
 	padding: 2px;
 	position: absolute;
 	top: 0;
-	transform-origin: center center -50px;
+	transform-origin: center center -100px;  /* z value should be half of height */
 	transition: transform 300ms;
 	width: 100%;
 	z-index: 1;
@@ -90,4 +90,32 @@ section::after {
 .ui-tile-title {
 	bottom: 0;
 	position: absolute;
+}
+
+.ui-tile--rotate2 .ui-tile-surface {
+	animation: infinite 10s liner;
+}
+.ui-tile--rotate2 .ui-tile-surface:nth-child(1) {
+	animation-name: tile-rotate2-1;
+}
+.ui-tile--rotate2 .ui-tile-surface:nth-child(2) {
+	animation-name: tile-rotate2-2;
+}
+@keyframes tile-rotate2-1 {
+	  0% { pacity:1; transform:rotateX(  0deg); z-index:2; }
+	 48% { pacity:1; transform:rotateX(  0deg); z-index:2; }
+	 49% { pacity:0.5; transform:rotateX(45deg); z-index:1; }
+	 50% { pacity:0; transform:rotateX( 90deg); z-index:1; }
+	 98% { pacity:0; transform:rotateX( 90deg); z-index:1; }
+	 99% { pacity:0.5; transform:rotateX(45deg); z-index:2; }
+	100% { pacity:1; transform:rotateX(  0deg); z-index:2; }
+}
+@keyframes tile-rotate2-2 {
+	  0% { pacity:0; transform:rotateX(-90deg); z-index:1; }
+	 48% { pacity:0; transform:rotateX(-90deg); z-index:1; }
+	 49% { pacity:0.5; transform:rotateX(-45deg); z-index:2; }
+	 50% { pacity:1; transform:rotateX(  0deg); z-index:2; }
+	 98% { pacity:1; transform:rotateX(  0deg); z-index:2; }
+	 99% { pacity:0.5; transform:rotateX(-45deg); z-index:1; }
+	100% { pacity:0; transform:rotateX(-90deg); z-index:1; }
 }
