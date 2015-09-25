@@ -36,7 +36,7 @@ section::after {
 		border-color: rgba(255,255,255,0.6);
 	}
 	&-title {
-		font-size: 14px;;
+		font-size: 14px;
 	}
 
 	// &-surface--lightBrown {
@@ -63,7 +63,7 @@ section::after {
 	width: $tile-width;
 
 	&-block {
-		height: 100%;;
+		height: 100%;
 		transform-style: preserve-3d;
 		width: 100%;
 	}
