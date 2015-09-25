@@ -35,12 +35,12 @@ section::after {
 .tile--wide {
 	width: 200px;
 }
-.surface {
+.tile-surface {
 	background-color: #006;
 	color: #fff;
 	font-family: sans-serif;
 }
-.tile:hover .surface {
+.tile:hover .tile-surface {
 	border-color: rgba(255,255,255,0.6);
 }
 
