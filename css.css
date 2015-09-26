@@ -88,7 +88,7 @@ section::after {
   transform: translateZ(48px); }
 
 .ui-tile.ui-tile--rotate2 .ui-tile-surface:nth-child(2) {
-  transform: rotateX(-90deg) translateZ(48px); }
+  transform: rotateX(90deg) translateZ(48px); }
 
 @keyframes tile-rotate2--medium {
   0% {
@@ -96,9 +96,9 @@ section::after {
   5% {
     transform: rotateX(0deg) translateZ(-48px); }
   10% {
-    transform: rotateX(90deg) translateZ(-48px); }
+    transform: rotateX(-90deg) translateZ(-48px); }
   55% {
-    transform: rotateX(90deg) translateZ(-48px); }
+    transform: rotateX(-90deg) translateZ(-48px); }
   60% {
     transform: rotateX(0deg) translateZ(-48px); } }
 
@@ -117,7 +117,7 @@ section::after {
   transform: translateZ(98px); }
 
 .ui-tile--large.ui-tile--rotate2 .ui-tile-surface:nth-child(2) {
-  transform: rotateX(-90deg) translateZ(98px); }
+  transform: rotateX(90deg) translateZ(98px); }
 
 @keyframes tile-rotate2--large {
   0% {
@@ -125,9 +125,9 @@ section::after {
   5% {
     transform: rotateX(0deg) translateZ(-98px); }
   10% {
-    transform: rotateX(90deg) translateZ(-98px); }
+    transform: rotateX(-90deg) translateZ(-98px); }
   55% {
-    transform: rotateX(90deg) translateZ(-98px); }
+    transform: rotateX(-90deg) translateZ(-98px); }
   60% {
     transform: rotateX(0deg) translateZ(-98px); } }
 
@@ -146,7 +146,7 @@ section::after {
   transform: translateZ(48px); }
 
 .ui-tile--wide.ui-tile--rotate2 .ui-tile-surface:nth-child(2) {
-  transform: rotateX(-90deg) translateZ(48px); }
+  transform: rotateX(90deg) translateZ(48px); }
 
 @keyframes tile-rotate2--wide {
   0% {
@@ -154,9 +154,9 @@ section::after {
   5% {
     transform: rotateX(0deg) translateZ(-48px); }
   10% {
-    transform: rotateX(90deg) translateZ(-48px); }
+    transform: rotateX(-90deg) translateZ(-48px); }
   55% {
-    transform: rotateX(90deg) translateZ(-48px); }
+    transform: rotateX(-90deg) translateZ(-48px); }
   60% {
     transform: rotateX(0deg) translateZ(-48px); } }
 
