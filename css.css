@@ -35,6 +35,10 @@ section::after {
 .tile-surface--white {
   background-color: #fff; }
 
+.tile-surface--yellow {
+  background-color: #f7df1e; }
+
+.tile-surface--yellow,
 .tile-surface--white {
   color: #006; }
 
@@ -54,6 +58,7 @@ section::after {
     box-sizing: border-box;
     height: 100%;
     left: 0;
+    overflow: hidden;
     padding: 2px;
     position: absolute;
     top: 0;
@@ -67,6 +72,15 @@ section::after {
     top: 0;
     right: 0;
     max-width: 50%; }
+  .ui-tile-backgroundImage {
+    bottom: 0;
+    height: auto;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%; }
   .ui-tile-title {
     bottom: 0;
     position: absolute; }
