@@ -126,9 +126,7 @@ section::after {
 	#{$root-selector} {
 		height: $height;
 		width: $width;
-	}
 
-	#{$root-selector} {
 		#{$base-selector}-block {
 			transform: translateZ(-$radius);
 			transform-origin: center center #{-$radius};
