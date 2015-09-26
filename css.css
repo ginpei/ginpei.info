@@ -1,6 +1,9 @@
 body {
   font-family: sans-serif; }
 
+section {
+  margin-bottom: 2em; }
+
 section > h1 {
   font-size: 1em;
   font-weight: normal;
