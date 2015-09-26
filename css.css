@@ -35,6 +35,9 @@ section::after {
 .tile-surface--lightBrown {
   background-color: #ca7; }
 
+.tile-surface--blue {
+  background-color: #69c; }
+
 .tile-surface--white {
   background-color: #fff; }
 
