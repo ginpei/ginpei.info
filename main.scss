@@ -22,6 +22,7 @@ section::after {
 	margin: auto;
 	width: $tile-width * 3;
 }
+
 .tile {
 	a {
 		text-decoration: none;
@@ -59,109 +60,4 @@ section::after {
 	}
 }
 
-// UI: tile
-.ui-tile {
-	float: left;
-	margin: $tile-margin;
-	perspective: 300px;
-
-	&-block {
-		height: 100%;
-		transform-style: preserve-3d;
-		width: 100%;
-	}
-	&-surface {
-		border: 2px transparent solid;  // cannnot be outline because of z-order
-		box-sizing: border-box;
-		height: 100%;
-		left: 0;
-		overflow: hidden;
-		padding: 2px;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
-	&-icon {
-		bottom: 0;
-		max-height: 50%;
-		left: 0;
-		margin: auto;
-		position: absolute;
-		top: 0;
-		right: 0;
-		max-width: 50%;
-	}
-	&-backgroundImage {
-		bottom: 0;
-		height: auto;
-		left: 0;
-		margin: auto;
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 100%;
-	}
-	&-title {
-		bottom: 0;
-		position: absolute;
-	}
-
-	&--rotate2 {
-		z-index: 1;
-	}
-}
-@mixin ui-tile-sizedstyles($col-span, $row-span, $name:false) {
-	$width: $tile-width * $col-span - $tile-margin * 2;
-	$height: $tile-width * $row-span - $tile-margin * 2;
-	$radius: $height / 2;
-	$base-selector: ".ui-tile";
-	@if $name {
-		$root-selector: "#{$base-selector}--#{$name}";
-	}
-	@else {
-		$name: "medium";
-		$root-selector: #{$base-selector};
-	}
-
-	#{$root-selector} {
-		height: $height;
-		width: $width;
-
-		#{$base-selector}-block {
-			transform: translateZ(-$radius);
-			transform-origin: center center #{-$radius};
-		}
-
-		&#{$base-selector}--rotate2 {
-			#{$base-selector}-block {
-				animation: tile-rotate2--#{$name} 20s infinite;
-			}
-			#{$base-selector}-surface:nth-child(1) {
-				transform: translateZ($radius);
-			}
-			#{$base-selector}-surface:nth-child(2) {
-				transform: rotateX(90deg) translateZ($radius);
-			}
-		}
-		@keyframes tile-rotate2--#{$name} {
-			  0% { transform: rotateX(  0deg) translateZ(-$radius); }
-			  5% { transform: rotateX(  0deg) translateZ(-$radius); }
-			 10% { transform: rotateX(-90deg) translateZ(-$radius); }
-			 55% { transform: rotateX(-90deg) translateZ(-$radius); }
-			 60% { transform: rotateX(  0deg) translateZ(-$radius); }
-		}
-	}
-
-	.is-msie {
-		#{$root-selector} #{$base-selector}-block {
-			animation-name: none;
-			transform: none;
-		}
-		#{$root-selector}#{$base-selector}--rotate2 #{$base-selector}-surface {
-			transform: none;
-		}
-	}
-}
-@include ui-tile-sizedstyles(1, 1);
-@include ui-tile-sizedstyles(2, 2, "large");
-@include ui-tile-sizedstyles(2, 1  , "wide");
+@import 'ui-tile';
