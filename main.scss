@@ -71,7 +71,7 @@ section::after {
 		width: 100%;
 	}
 	&-surface {
-		border: 2px transparent solid;
+		border: 2px transparent solid;  // cannnot be outline because of z-order
 		box-sizing: border-box;
 		height: 100%;
 		left: 0;
