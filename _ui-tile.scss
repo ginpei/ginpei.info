@@ -3,6 +3,7 @@
 	float: left;
 	margin: $tile-margin;
 	perspective: 300px;
+	position: relative;
 
 	&-block {
 		height: 100%;
