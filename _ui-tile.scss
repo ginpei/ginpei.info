@@ -68,7 +68,6 @@
 
 		#{$base-selector}-block {
 			transform: translateZ(-$radius);
-			transform-origin: center center #{-$radius};
 		}
 
 		&#{$base-selector}--rotate2 {
@@ -83,11 +82,11 @@
 			}
 		}
 		@keyframes tile-rotate2--#{$name} {
-			  0% { transform: rotateX(  0deg) translateZ(-$radius); }
-			  5% { transform: rotateX(  0deg) translateZ(-$radius); }
-			 10% { transform: rotateX(-90deg) translateZ(-$radius); }
-			 55% { transform: rotateX(-90deg) translateZ(-$radius); }
-			 60% { transform: rotateX(  0deg) translateZ(-$radius); }
+			  0% { transform: translateZ(-$radius) rotateX(  0deg); }
+			  5% { transform: translateZ(-$radius) rotateX(  0deg); }
+			 10% { transform: translateZ(-$radius) rotateX(-90deg); }
+			 55% { transform: translateZ(-$radius) rotateX(-90deg); }
+			 60% { transform: translateZ(-$radius) rotateX(  0deg); }
 		}
 	}
 

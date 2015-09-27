@@ -97,8 +97,7 @@ section::after {
   height: 96px;
   width: 96px; }
   .ui-tile .ui-tile-block {
-    transform: translateZ(-48px);
-    transform-origin: center center -48px; }
+    transform: translateZ(-48px); }
   .ui-tile.ui-tile--rotate2 .ui-tile-block {
     animation: tile-rotate2--medium 20s infinite; }
   .ui-tile.ui-tile--rotate2 .ui-tile-surface:nth-child(1) {
@@ -108,15 +107,15 @@ section::after {
 
 @keyframes tile-rotate2--medium {
   0% {
-    transform: rotateX(0deg) translateZ(-48px); }
+    transform: translateZ(-48px) rotateX(0deg); }
   5% {
-    transform: rotateX(0deg) translateZ(-48px); }
+    transform: translateZ(-48px) rotateX(0deg); }
   10% {
-    transform: rotateX(-90deg) translateZ(-48px); }
+    transform: translateZ(-48px) rotateX(-90deg); }
   55% {
-    transform: rotateX(-90deg) translateZ(-48px); }
+    transform: translateZ(-48px) rotateX(-90deg); }
   60% {
-    transform: rotateX(0deg) translateZ(-48px); } }
+    transform: translateZ(-48px) rotateX(0deg); } }
 
 .is-msie .ui-tile .ui-tile-block {
   animation-name: none;
@@ -129,8 +128,7 @@ section::after {
   height: 196px;
   width: 196px; }
   .ui-tile--large .ui-tile-block {
-    transform: translateZ(-98px);
-    transform-origin: center center -98px; }
+    transform: translateZ(-98px); }
   .ui-tile--large.ui-tile--rotate2 .ui-tile-block {
     animation: tile-rotate2--large 20s infinite; }
   .ui-tile--large.ui-tile--rotate2 .ui-tile-surface:nth-child(1) {
@@ -140,15 +138,15 @@ section::after {
 
 @keyframes tile-rotate2--large {
   0% {
-    transform: rotateX(0deg) translateZ(-98px); }
+    transform: translateZ(-98px) rotateX(0deg); }
   5% {
-    transform: rotateX(0deg) translateZ(-98px); }
+    transform: translateZ(-98px) rotateX(0deg); }
   10% {
-    transform: rotateX(-90deg) translateZ(-98px); }
+    transform: translateZ(-98px) rotateX(-90deg); }
   55% {
-    transform: rotateX(-90deg) translateZ(-98px); }
+    transform: translateZ(-98px) rotateX(-90deg); }
   60% {
-    transform: rotateX(0deg) translateZ(-98px); } }
+    transform: translateZ(-98px) rotateX(0deg); } }
 
 .is-msie .ui-tile--large .ui-tile-block {
   animation-name: none;
@@ -161,8 +159,7 @@ section::after {
   height: 96px;
   width: 196px; }
   .ui-tile--wide .ui-tile-block {
-    transform: translateZ(-48px);
-    transform-origin: center center -48px; }
+    transform: translateZ(-48px); }
   .ui-tile--wide.ui-tile--rotate2 .ui-tile-block {
     animation: tile-rotate2--wide 20s infinite; }
   .ui-tile--wide.ui-tile--rotate2 .ui-tile-surface:nth-child(1) {
@@ -172,15 +169,15 @@ section::after {
 
 @keyframes tile-rotate2--wide {
   0% {
-    transform: rotateX(0deg) translateZ(-48px); }
+    transform: translateZ(-48px) rotateX(0deg); }
   5% {
-    transform: rotateX(0deg) translateZ(-48px); }
+    transform: translateZ(-48px) rotateX(0deg); }
   10% {
-    transform: rotateX(-90deg) translateZ(-48px); }
+    transform: translateZ(-48px) rotateX(-90deg); }
   55% {
-    transform: rotateX(-90deg) translateZ(-48px); }
+    transform: translateZ(-48px) rotateX(-90deg); }
   60% {
-    transform: rotateX(0deg) translateZ(-48px); } }
+    transform: translateZ(-48px) rotateX(0deg); } }
 
 .is-msie .ui-tile--wide .ui-tile-block {
   animation-name: none;
