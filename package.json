@@ -1,9 +1,11 @@
 {
   "private": true,
   "dependencies": {
+    "jade": "^1.11.0",
     "node-sass": "^3.3.3"
   },
   "scripts": {
-    "css": "./node_modules/node-sass/bin/node-sass main.scss css.css"
+    "css": "./node_modules/node-sass/bin/node-sass main.scss css.css",
+    "html": "./node_modules/jade/bin/jade.js index.jade"
   }
 }
