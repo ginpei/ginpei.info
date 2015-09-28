@@ -1,3 +1,8 @@
+mixin ui-section(title)
+	section
+		h1= title
+		block
+
 doctype html
 html(lang='en')
 	head
@@ -8,8 +13,7 @@ html(lang='en')
 		link(rel='stylesheet', href='css.css')
 	body
 		.mainArea
-			section
-				h1 About Ginpei
+			+ui-section('About Ginpei')
 				.tile.ui-tile.ui-tile--large.ui-tile--rotate2
 					.ui-tile-block
 						.tile-surface.ui-tile-surface
