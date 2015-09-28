@@ -1,0 +1,49 @@
+mixin ui-section(title)
+	section
+		h1= title
+		block
+
+mixin ui-tile(options)
+	unless options
+		- options = {}
+
+	- var classes = ['tile', 'ui-tile']
+	if options.size
+		- classes.push('ui-tile--' + options.size)
+	if options.rotate
+		- classes.push('ui-tile--rotate' + options.rotate)
+
+	div(class=classes)
+		if options.rotate
+			.ui-tile-block
+				block
+		else
+			block
+
+mixin ui-tile-surface(options)
+	unless options
+		- options = {}
+
+	- var classes = ['tile-surface', 'ui-tile-surface']
+	if options.color
+		- classes.push('tile-surface--' + options.color)
+
+	if options.url
+		a(class=classes, href=options.url)
+			+ui-tile-content(options)
+				block
+	else
+		span(class=classes)
+			+ui-tile-content(options)
+				block
+
+mixin ui-tile-content(options)
+	unless options
+		- options = {}
+
+	if options.icon
+		img.ui-tile-icon(src=options.icon, alt='')
+	else if options.image
+		img.ui-tile-backgroundImage(src=options.image, alt='')
+	span.tile-title.ui-tile-title
+		block

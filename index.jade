@@ -1,7 +1,4 @@
-mixin ui-section(title)
-	section
-		h1= title
-		block
+include _ui-tile
 
 doctype html
 html(lang='en')
@@ -14,13 +11,9 @@ html(lang='en')
 	body
 		.mainArea
 			+ui-section('About Ginpei')
-				.tile.ui-tile.ui-tile--large.ui-tile--rotate2
-					.ui-tile-block
-						.tile-surface.ui-tile-surface
-							span.tile-title.ui-tile-title Ginpei
-						.tile-surface.tile-surface--white.ui-tile-surface
-							img.ui-tile-icon(src='image/ginpei.png', alt='')
-							span.tile-title.ui-tile-title Ginpei
+				+ui-tile({ size:'large', rotate:2 })
+					+ui-tile-surface Ginpei
+					+ui-tile-surface({ color:'white', icon:'image/ginpei.png' }) Ginpei
 				.tile.ui-tile.ui-tile--rotate2
 					.ui-tile-block
 						a.tile-surface.ui-tile-surface(href='https://github.com/ginpei')
@@ -29,13 +22,10 @@ html(lang='en')
 						a.tile-surface.ui-tile-surface(href='https://github.com/ginpei')
 							img.ui-tile-icon(src='image/github.png', alt='')
 							span.tile-title.ui-tile-title GitHub
-				.tile.ui-tile
-					a.tile-surface.ui-tile-surface(href='https://twitter.com/ginpei_en/')
-						img.ui-tile-icon(src='image/twitter.png', alt='')
-						span.tile-title.ui-tile-title Twitter
-				.tile.ui-tile
-					a.tile-surface.ui-tile-surface(href='http://ginpen.com')
-						span.tile-title.ui-tile-title Blog
+				+ui-tile
+					+ui-tile-surface({ url:'https://twitter.com/ginpei_en/', icon:'image/twitter.png' }) Twitter
+				+ui-tile
+					+ui-tile-surface({ url:'http://ginpen.com' }) Blog
 				.tile.ui-tile.ui-tile--wide.ui-tile--rotate2
 					.ui-tile-block
 						a.tile-surface.ui-tile-surface(href='https://instagram.com/ginpei/')
@@ -46,10 +36,8 @@ html(lang='en')
 							span.tile-title.ui-tile-title Instagram
 			section
 				h1 Skills
-				.tile.ui-tile.ui-tile--large
-					span.tile-surface.tile-surface--yellow.ui-tile-surface
-						img.ui-tile-backgroundImage(src='image/javascript.png', alt='')
-						span.tile-title.ui-tile-title JavaScript
+				+ui-tile({ size:'large' })
+					+ui-tile-surface({ color:'yellow', image:'image/javascript.png' }) JavaScript
 				.tile.ui-tile
 					a.tile-surface.tile-surface--white.ui-tile-surface
 						img.ui-tile-backgroundImage(src='image/html5.png', alt='')
