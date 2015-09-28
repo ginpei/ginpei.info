@@ -18,65 +18,41 @@ html(lang='en')
 				+ui-tile({ rotate:2 })
 					+ui-tile-surface({ icon:'image/github.png', url:'https://github.com/ginpei' }) GitHub
 					+ui-tile-surface({ icon:'image/github.png', url:'https://github.com/ginpei' }) GitHub
-				+ui-tile
-					+ui-tile-surface({ url:'https://twitter.com/ginpei_en/', icon:'image/twitter.png' }) Twitter
-				+ui-tile
-					+ui-tile-surface({ url:'http://ginpen.com' }) Blog
+				+ui-tile({ url:'https://twitter.com/ginpei_en/', icon:'image/twitter.png' }) Twitter
+				+ui-tile({ url:'http://ginpen.com' }) Blog
 				+ui-tile({ size:'wide', rotate:2 })
 					+ui-tile-surface({ icon:'image/instagram.png', url:'https://instagram.com/ginpei/' }) Instagram
 					+ui-tile-surface({ icon:'image/instagram.png', url:'https://instagram.com/ginpei/' }) Instagram
 
 			+ui-section('Skills')
-				+ui-tile({ size:'large' })
-					+ui-tile-surface({ color:'yellow', image:'image/javascript.png' }) JavaScript
-				+ui-tile
-					+ui-tile-surface({ color:'white', image:'image/html5.png' }) HTML
-				+ui-tile
-					+ui-tile-surface({ url:'https://jquery.com/' }) jQuery
-				+ui-tile
-					+ui-tile-surface({ url:'http://backbonejs.org/' }) Backbone.js
-				+ui-tile
-					+ui-tile-surface({ color:'white', icon:'image/coffeescript.png'  }) CoffeeScript
-				+ui-tile
-					+ui-tile-surface({ color:'blue' }) CSS
-				+ui-tile
-					+ui-tile-surface Sass
-				+ui-tile
-					+ui-tile-surface({ url:'http://jasmine.github.io/' }) Test with Jasmine
-				+ui-tile
-					+ui-tile-surface Git
-				+ui-tile({ size:'wide' })
-					+ui-tile-surface({ color:'white', icon:'image/Ruby_on_Rails.svg' }) Ruby on Rails
-				+ui-tile
-					+ui-tile-surface({ icon:'image/cpp.gif' }) C++
+				+ui-tile({ color:'yellow', image:'image/javascript.png', size:'large' }) JavaScript
+				+ui-tile({ color:'white', image:'image/html5.png' }) HTML
+				+ui-tile({ url:'https://jquery.com/' }) jQuery
+				+ui-tile({ url:'http://backbonejs.org/' }) Backbone.js
+				+ui-tile({ color:'white', icon:'image/coffeescript.png'  }) CoffeeScript
+				+ui-tile({ color:'blue' }) CSS
+				+ui-tile Sass
+				+ui-tile({ url:'http://jasmine.github.io/' }) Test with Jasmine
+				+ui-tile Git
+				+ui-tile({ color:'white', icon:'image/Ruby_on_Rails.svg', size:'wide' }) Ruby on Rails
+				+ui-tile({ icon:'image/cpp.gif' }) C++
 
 			+ui-section('Favorite and Hobby')
-				+ui-tile
-					+ui-tile-surface Rock Music
-				+ui-tile
-					+ui-tile-surface Playing Drums
-				+ui-tile
-					+ui-tile-surface({ color:'white', image:'image/thePillows.png', url:'https://www.youtube.com/watch?v=f92VWkYl8CI' }) the pillows
-				+ui-tile({ size:'large' })
-					+ui-tile-surface({ image:'image/pianojac.png', url:'https://www.youtube.com/watch?v=2EEsa_pqGAs'}) →Pia-no-jaC←
-				+ui-tile
-					+ui-tile-surface({ color:'lightBrown' }) Playing Cajon and Percussions
-				+ui-tile
-					+ui-tile-surface({ color:'white', image:'image/hiromiUehara.png', url:'https://www.youtube.com/watch?v=xWNyn9Ttf8w' }) Hiromi Uehara
-				+ui-tile
-					+ui-tile-surface Making Sushi
+				+ui-tile Rock Music
+				+ui-tile Playing Drums
+				+ui-tile({ color:'white', image:'image/thePillows.png', url:'https://www.youtube.com/watch?v=f92VWkYl8CI' }) the pillows
+				+ui-tile({ image:'image/pianojac.png', url:'https://www.youtube.com/watch?v=2EEsa_pqGAs',  size:'large' }) →Pia-no-jaC←
+				+ui-tile({ color:'lightBrown' }) Playing Cajon and Percussions
+				+ui-tile({ color:'white', image:'image/hiromiUehara.png', url:'https://www.youtube.com/watch?v=xWNyn9Ttf8w' }) Hiromi Uehara
+				+ui-tile Making Sushi
 
 			+ui-section('Publication')
-				+ui-tile
-					+ui-tile-surface({ image:'image/publication-20150325.jpg', url:'http://www.amazon.co.jp/dp/4844364936' }) 25 March 2015
-				+ui-tile
-					+ui-tile-surface({ image:'image/publication-20140203.jpg', url:'http://www.amazon.co.jp/dp/4844364014' }) 3 February 2014
+				+ui-tile({ image:'image/publication-20150325.jpg', url:'http://www.amazon.co.jp/dp/4844364936' }) 25 March 2015
+				+ui-tile({ image:'image/publication-20140203.jpg', url:'http://www.amazon.co.jp/dp/4844364014' }) 3 February 2014
 
 			+ui-section('Contact')
-				+ui-tile({ size:'wide' })
-					+ui-tile-surface Mail
-				+ui-tile
-					+ui-tile-surface({ icon:'image/twitter.png', url:'https://twitter.com/ginpei_en/' }) Twitter
+				+ui-tile({ size:'wide' }) Mail
+				+ui-tile({ icon:'image/twitter.png', url:'https://twitter.com/ginpei_en/' }) Twitter
 
 		script.
 			// IE 11- doesn't support preserve-3d. Edge is OK.

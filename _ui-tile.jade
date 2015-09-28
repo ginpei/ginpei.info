@@ -13,12 +13,14 @@ mixin ui-tile(options)
 	if options.rotate
 		- classes.push('ui-tile--rotate' + options.rotate)
 
-	div(class=classes)
-		if options.rotate
+	if options.rotate
+		div(class=classes)
 			.ui-tile-block
 				block
-		else
-			block
+	else
+		div(class=classes)
+			+ui-tile-surface(options)
+				block
 
 mixin ui-tile-surface(options)
 	unless options
