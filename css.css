@@ -36,16 +36,16 @@ img {
   font-size: 14px; }
 
 .tile-surface--lightBrown {
-  background-color: #ca7; }
+  background-color: #cba976; }
 
 .tile-surface--blue {
-  background-color: #69c; }
+  background-color: #6699cc; }
 
 .tile-surface--white {
-  background-color: #fff; }
+  background-color: white; }
 
 .tile-surface--yellow {
-  background-color: #f7df1e; }
+  background-color: #f7d918; }
 
 .tile-surface--yellow,
 .tile-surface--white {
