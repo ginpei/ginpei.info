@@ -48,13 +48,20 @@ img {
 	&-surface--blue {
 		background-color: hsl(210, 50%, 60%);
 	}
+	&-surface--orange {
+		background-color: hsl(30, 90%, 70%);
+	}
 	&-surface--white {
 		background-color: hsl(0, 0%, 100%);
+	}
+	&-surface--lightGray {
+		background-color: hsl(0, 0%, 95%);
 	}
 	&-surface--yellow {
 		background-color: hsl(52, 90%, 50%);
 	}
 	&-surface--yellow,
+	&-surface--lightGray,
 	&-surface--white {
 		color: #006;
 	}

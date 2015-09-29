@@ -41,13 +41,20 @@ img {
 .tile-surface--blue {
   background-color: #6699cc; }
 
+.tile-surface--orange {
+  background-color: #f7b36e; }
+
 .tile-surface--white {
   background-color: white; }
+
+.tile-surface--lightGray {
+  background-color: #f2f2f2; }
 
 .tile-surface--yellow {
   background-color: #f2d40d; }
 
 .tile-surface--yellow,
+.tile-surface--lightGray,
 .tile-surface--white {
   color: #006; }
 
