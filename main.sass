@@ -1,0 +1,54 @@
+$tile-margin: 2px
+$tile-width: 100px
+
+body
+	font-family: sans-serif
+section
+	margin-bottom: 2em
+section > h1
+	font-size: 1em
+	font-weight: normal
+	margin: 0 0 1em
+section::after
+	content: ""
+	clear: both
+	display: block
+img
+	border-style: none
+
+.mainArea
+	margin: auto
+	width: $tile-width * 3
+
+.tile
+	a
+		text-decoration: none
+	&-surface
+		background-color: #006
+		color: #fff
+		font-family: sans-serif
+	&:hover &-surface
+		border-color: rgba(255,255,255,0.6)
+	&-title
+		font-size: 14px
+
+	&-surface--lightBrown
+		background-color: hsl(36, 30%, 60%)
+	&-surface--blue
+		background-color: hsl(210, 50%, 60%)
+	&-surface--orange
+		background-color: hsl(30, 90%, 70%)
+	&-surface--white
+		background-color: hsl(0, 0%, 100%)
+	&-surface--lightGray
+		background-color: hsl(0, 0%, 95%)
+	&-surface--yellow
+		background-color: hsl(52, 90%, 50%)
+	&-surface--yellow,
+	&-surface--lightGray,
+	&-surface--white
+		color: #006
+	&:hover &-surface--white
+		border-color: rgba(0,0,0,0.2)
+
+@import 'ui-tile'
