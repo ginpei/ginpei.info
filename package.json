@@ -2,7 +2,8 @@
   "private": true,
   "dependencies": {
     "jade": "^1.11.0",
-    "node-sass": "^3.3.3"
+    "node-sass": "^3.3.3",
+    "spritesmith-cli": "^1.1.1"
   },
   "scripts": {
     "css": "./node_modules/node-sass/bin/node-sass main.sass css.css",
