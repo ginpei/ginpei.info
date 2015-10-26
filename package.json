@@ -6,6 +6,7 @@
     "spritesmith-cli": "^1.1.1"
   },
   "scripts": {
+    "start": "npm run html; npm run css",
     "css": "./node_modules/node-sass/bin/node-sass src/main.sass ./css.css",
     "html": "./node_modules/jade/bin/jade.js -o . -P src/index.jade"
   }
