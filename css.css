@@ -27,7 +27,8 @@ img {
 .tile-surface {
   background-color: #006;
   color: #fff;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  text-shadow: 1px 1px 0 #666; }
 
 .tile:hover .tile-surface {
   border-color: rgba(255, 255, 255, 0.6); }
@@ -54,7 +55,8 @@ img {
   background-color: #f2d40d; }
 
 .tile-surface--yellow, .tile-surface--lightGray, .tile-surface--white {
-  color: #006; }
+  color: #006;
+  text-shadow: 1px 1px 0 #ccc; }
 
 .tile:hover .tile-surface--white {
   border-color: rgba(0, 0, 0, 0.2); }
