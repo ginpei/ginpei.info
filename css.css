@@ -53,9 +53,7 @@ img {
 .tile-surface--yellow {
   background-color: #f2d40d; }
 
-.tile-surface--yellow,
-.tile-surface--lightGray,
-.tile-surface--white {
+.tile-surface--yellow, .tile-surface--lightGray, .tile-surface--white {
   color: #006; }
 
 .tile:hover .tile-surface--white {
