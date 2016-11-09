@@ -6,8 +6,14 @@
     "spritesmith-cli": "^1.1.1"
   },
   "scripts": {
-    "start": "npm run html; npm run css",
-    "css": "./node_modules/node-sass/bin/node-sass src/main.sass ./css.css",
-    "html": "./node_modules/jade/bin/jade.js -o . -P src/index.jade"
+    "css_build": "./node_modules/node-sass/bin/node-sass src/main.sass ./css.css",
+    "css_watch": "chokidar src/*.sass -c 'npm run css_build'",
+    "start": "concurrently 'npm run css_watch' 'npm run html_watch'",
+    "html_build": "./node_modules/jade/bin/jade.js -o . -P src/index.jade",
+    "html_watch": "chokidar src/*.jade -c 'npm run html_build'"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "concurrently": "^3.1.0"
   }
 }
