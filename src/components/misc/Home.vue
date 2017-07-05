@@ -1,5 +1,15 @@
 <template>
-	<div>
+	<base-layout>
 		<h1>Home</h1>
-	</div>
+	</base-layout>
 </template>
+
+<script>
+const BaseLayout = require('../layouts/BaseLayout.vue');
+
+module.exports = {
+	components: {
+		BaseLayout,
+	},
+};
+</script>
