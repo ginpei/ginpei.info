@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "develop": "watchify -dv -t vueify -p [ browserify-hmr --hostname \"0.0.0.0\" ] -e src/index.js -o build/app.js",
+    "develop": "watchify -dv -t vueify -p browserify-hmr -e src/index.js -o build/app.js",
     "start": "npm run develop -s"
   },
   "dependencies": {
