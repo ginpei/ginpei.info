@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+
+  node:
+    build: .
+    ports:
+      - "3123:3123"
+    command: "npm start -s"
+    volumes:
+      - ./package.json:/app/package.json
+      - ./index.html:/app/index.html
+      - ./src:/app/src
+      - build:/app/build
+
+  www:
+    build: ./docker/www
+    ports:
+      - "80:80"
+    volumes:
+      - ./index.html:/app/index.html
+      - build:/app/build
+
+volumes:
+  build:

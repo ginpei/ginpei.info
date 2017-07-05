@@ -1,20 +1,21 @@
 {
   "private": true,
-  "dependencies": {
-    "jade": "^1.11.0",
-    "node-sass": "^3.3.3",
-    "spritesmith-cli": "^1.1.1"
-  },
   "scripts": {
-    "build": "npm run css_build; npm run html_build",
-    "css_build": "./node_modules/node-sass/bin/node-sass src/main.sass ./css.css",
-    "css_watch": "chokidar src/*.sass -c 'npm run css_build'",
-    "start": "concurrently 'npm run css_watch' 'npm run html_watch'",
-    "html_build": "./node_modules/jade/bin/jade.js -o . -P src/index.jade",
-    "html_watch": "chokidar src/*.jade -c 'npm run html_build'"
+    "develop": "watchify -dv -t vueify -p [ browserify-hmr --hostname \"0.0.0.0\" ] -e src/index.js -o build/app.js",
+    "start": "npm run develop -s"
+  },
+  "dependencies": {
+    "browserify": "^14.4.0",
+    "envify": "^4.0.0",
+    "vue": "^2.3.3",
+    "vue-router": "^2.5.3",
+    "vueify": "^9.4.1",
+    "vuex": "^2.3.1"
   },
   "devDependencies": {
-    "chokidar-cli": "^1.2.0",
-    "concurrently": "^3.1.0"
+    "browserify-hmr": "^0.3.5",
+    "eslint": "^4.0.0",
+    "eslint-plugin-html": "^3.0.0",
+    "watchify": "^3.9.0"
   }
 }
