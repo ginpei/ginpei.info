@@ -1,4 +1,4 @@
-const Home = require('./components/misc/Home.vue');
+const Home = require('./pages/Index.vue');
 const Vue = require('vue');
 const VueRouter = require('vue-router');
 
