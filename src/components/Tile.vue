@@ -78,7 +78,6 @@ module.exports = {
 			const styles = {
 				backgroundImage: this.backgroundImageStyleUrl,
 			};
-			console.debug(styles);
 			return styles;
 		},
 
