@@ -18,6 +18,7 @@
 	margin: var(--margin);
 	padding: var(--padding);
 	position: relative;
+	transition: transform 300ms;
 	width: var(--length);
 }
 .tile:hover {
@@ -36,19 +37,20 @@
 }
 
 .title {
-	position: absolute;
-	left: var(--padding);
 	bottom: var(--padding);
+	color: inherit;
+	left: var(--padding);
+	position: absolute;
 }
 .tile:hover .title {
-	left: 0;
 	bottom: 0;
+	left: 0;
 }
 </style>
 
 <template>
-	<div :class="classes" :style="styles" class="tile">
-		<span class="title">{{title}}</span>
+	<div @transitionend="transitionend" :class="classes" :style="styles" class="tile">
+		<router-link :to="`/?tile=${this.title}`" class="title">{{title}}</router-link>
 	</div>
 </template>
 
@@ -61,7 +63,17 @@ module.exports = {
 		'title',
 	],
 
+	data() {
+		return {
+			transitioning: false,
+		};
+	},
+
 	computed: {
+		open() {
+			return this.$route.query.tile === this.title;
+		},
+
 		classes() {
 			const classes = {
 				// colors
@@ -78,6 +90,13 @@ module.exports = {
 			const styles = {
 				backgroundImage: this.backgroundImageStyleUrl,
 			};
+			if (this.open) {
+				styles.transform = `scale(2)`;  // TODO fit screen
+				styles.zIndex = 1;
+			}
+			else if (this.transitioning) {
+				styles.zIndex = 1;
+			}
 			return styles;
 		},
 
@@ -88,6 +107,18 @@ module.exports = {
 			else {
 				return null;
 			}
+		},
+	},
+
+	watch: {
+		open(newVal, oldVal) {
+			this.transitioning = true;
+		},
+	},
+
+	methods: {
+		transitionend(event) {
+			this.transitioning = false;
 		},
 	},
 };
