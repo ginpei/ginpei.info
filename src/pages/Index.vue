@@ -13,6 +13,14 @@
 	top: 0;
 	width: 100%;
 }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 300ms;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
 
 <template>
@@ -27,7 +35,9 @@
 				<tile title="Instagram" size="wide"></tile>
 			</div>
 		</section>
-		<div @click="overlay_onclick" v-show="openingTile" class="overlay"></div>
+		<transition name="fade">
+			<div @click="overlay_onclick" v-show="openingTile" class="overlay"></div>
+		</transition>
 	</base-layout>
 </template>
 
