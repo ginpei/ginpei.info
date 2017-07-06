@@ -29,11 +29,18 @@
 	background-color: #fff;
 	color: #006;
 }
+.tile--light-grey {
+	background-color: #f2f2f2;
+	color: #006;
+}
 .tile--large {
 	--size: 200px;
 }
 .tile--wide {
 	width: calc(var(--size) * 2 - var(--padding) * 2 - var(--margin) * 2);
+}
+.tile--fillImage {
+	background-size: var(--size);
 }
 
 .title {
@@ -58,6 +65,7 @@
 module.exports = {
 	props: [
 		'color',
+		'fill-image',
 		'image',
 		'size',
 		'title',
@@ -75,14 +83,20 @@ module.exports = {
 		},
 
 		classes() {
-			const classes = {
-				// colors
-				'tile--white': this.color === 'white',
+			const classes = {};
 
-				// sizes
-				'tile--large': this.size === 'large',
-				'tile--wide': this.size === 'wide',
-			};
+			if (this.color) {
+				classes[`tile--${this.color}`] = true;
+			}
+
+			if (this.size) {
+				classes[`tile--${this.size}`] = true;
+			}
+
+			if (this.fillImage === 'yes') {
+				classes['tile--fillImage'] = true;
+			}
+
 			return classes
 		},
 

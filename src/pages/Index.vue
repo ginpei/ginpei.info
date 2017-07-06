@@ -35,6 +35,13 @@
 				<tile title="Instagram" size="wide"></tile>
 			</div>
 		</section>
+		<section class="container">
+			<h1>Skills</h1>
+			<div class="tile-container">
+				<tile title="JavaScript" image="javascript.png" color="white" size="large" fill-image="yes"></tile>
+				<tile title="Backbone.js" image="backbone.svg" color="light-grey"></tile>
+			</div>
+		</section>
 		<transition name="fade">
 			<div @click="overlay_onclick" v-show="openingTile" class="overlay"></div>
 		</transition>
