@@ -25,22 +25,17 @@
 
 <template>
 	<base-layout>
-		<section class="container">
-			<h1>About Ginpei</h1>
-			<div class="tile-container">
-				<tile title="Ginpei" image="ginpei.png" color="white" size="large"></tile>
-				<tile title="GitHub" image="github.png"></tile>
-				<tile title="Twitter" image="twitter.png"></tile>
-				<tile title="Blog"></tile>
-				<tile title="Instagram" size="wide"></tile>
-			</div>
-		</section>
-		<section class="container">
-			<h1>Skills</h1>
-			<div class="tile-container">
-				<tile title="JavaScript" image="javascript.png" color="white" size="large" fill-image="yes"></tile>
-				<tile title="Backbone.js" image="backbone.svg" color="light-grey"></tile>
-			</div>
+		<section v-for="c in contents" class="container">
+			<h1>{{c.title}}</h1>
+			<tile
+				v-for="t in c.tiles"
+				:id="t.id"
+				:color="t.color"
+				:fill-image="t.fillImage && 'yes'"
+				:image="t.image"
+				:size="t.size"
+				:title="t.title"
+				></tile>
 		</section>
 		<transition name="fade">
 			<div @click="overlay_onclick" v-show="openingTile" class="overlay"></div>
@@ -56,6 +51,63 @@ module.exports = {
 	components: {
 		BaseLayout,
 		Tile,
+	},
+
+	data() {
+		return {
+			contents: [
+				{
+					title: 'About Ginpei',
+					tiles: [
+						{
+							color: 'white',
+							id: 'ginpei',
+							image: 'ginpei.png',
+							size: 'large',
+							title: 'Ginpei',
+						},
+						{
+							id: 'github',
+							image: 'github.png',
+							title: 'GitHub',
+						},
+						{
+							id: 'twitter',
+							image: 'twitter.png',
+							title: 'Twitter',
+						},
+						{
+							id: 'blog',
+							title: 'Blog',
+						},
+						{
+							id: 'instagram',
+							size: 'wide',
+							title: 'Instagram',
+						},
+					],
+				},
+				{
+					title: 'About Ginpei',
+					tiles: [
+						{
+							color: 'white',
+							fillImage: true,
+							id: 'javascript',
+							image: 'javascript.png',
+							size: 'large',
+							title: 'JavaScript',
+						},
+						{
+							color: 'light-grey',
+							id: 'backbonejs',
+							image: 'backbone.svg',
+							title: 'Backbone.js',
+						},
+					],
+				},
+			],
+		};
 	},
 
 	computed: {
