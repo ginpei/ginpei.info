@@ -9,7 +9,7 @@
 	background-size: calc(var(--size) / 2)
 	background-repeat: no-repeat
 	background-position: center
-	border-color: #999
+	border-color: rgba(255, 255, 255, 0.6)
 	border-style: solid
 	border-width: 0
 	color: #fff
@@ -32,6 +32,10 @@
 .tile--light-grey
 	background-color: #f2f2f2
 	color: #006
+
+.tile--brown
+	background-color: #b89f7a
+	color: #fff
 
 .tile--large
 	--size: 200px
