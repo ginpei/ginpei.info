@@ -3,15 +3,16 @@
 	--size: 100px
 	--padding: 2px
 	--margin: 2px
-	--length: calc(var(--size) - var(--padding) * 2 - var(--margin) * 2)
+	--borderWidth: 2px
+	--length: calc(var(--size) - (var(--margin) + var(--borderWidth) + var(--padding)) * 2
 
 	background-color: #006
 	background-size: calc(var(--size) / 2)
 	background-repeat: no-repeat
 	background-position: center
-	border-color: rgba(255, 255, 255, 0.6)
+	border-color: transparent
 	border-style: solid
-	border-width: 0
+	border-width: var(--borderWidth)
 	color: #fff
 	float: left
 	height: var(--length)
@@ -22,12 +23,14 @@
 	width: var(--length)
 
 .tile:hover
-	border-width: var(--padding)
-	padding: 0
+	border-color: rgba(255, 255, 255, 0.6)
 
 .tile--white
 	background-color: #fff
 	color: #006
+
+	&:hover
+		border-color: rgba(0, 0, 0, 0.3)
 
 	.title
 		text-shadow: 1px 1px 0 #ccc
@@ -35,6 +38,9 @@
 .tile--light-grey
 	background-color: #f2f2f2
 	color: #006
+
+	&:hover
+		border-color: rgba(0, 0, 0, 0.3)
 
 	.title
 		text-shadow: 1px 1px 0 #ccc
@@ -55,7 +61,7 @@
 	--size: 200px
 
 .tile--wide
-	width: calc(var(--size) * 2 - var(--padding) * 2 - var(--margin) * 2)
+	width: calc(var(--size) * 2 - (var(--margin) + var(--borderWidth) + var(--padding)) * 2
 
 .tile--fillImage
 	background-size: var(--size)
@@ -68,10 +74,6 @@
 	left: var(--padding)
 	position: absolute
 	text-shadow: 1px 1px 0 #666
-
-.tile:hover .title
-	bottom: 0
-	left: 0
 
 // indicate external links
 a[href^="http:"],
