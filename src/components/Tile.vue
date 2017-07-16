@@ -75,9 +75,9 @@
 </style>
 
 <template lang="pug">
-	div(@transitionend="transitionend" :class="classes" :style="styles" class="tile")
-		router-link(:to="`/?tile=${this.title}`" class="title")
-			| {{title}}
+	router-link(:to="`/?tile=${this.title}`")
+		div(@transitionend="transitionend" :class="classes" :style="styles" class="tile")
+			span.title {{title}}
 </template>
 
 <script>
