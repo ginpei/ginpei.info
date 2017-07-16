@@ -73,27 +73,27 @@ module.exports = {
 	data() {
 		return {
 			transitioning: false,
-		};
+		}
 	},
 
 	computed: {
 		open() {
-			return this.$route.query.tile === this.title;
+			return this.$route.query.tile === this.title
 		},
 
 		classes() {
-			const classes = {};
+			const classes = {}
 
 			if (this.color) {
-				classes[`tile--${this.color}`] = true;
+				classes[`tile--${this.color}`] = true
 			}
 
 			if (this.size) {
-				classes[`tile--${this.size}`] = true;
+				classes[`tile--${this.size}`] = true
 			}
 
 			if (this.fillImage === 'yes') {
-				classes['tile--fillImage'] = true;
+				classes['tile--fillImage'] = true
 			}
 
 			return classes
@@ -102,37 +102,37 @@ module.exports = {
 		styles() {
 			const styles = {
 				backgroundImage: this.backgroundImageStyleUrl,
-			};
+			}
 			if (this.open) {
-				styles.transform = `scale(2)`;  // TODO fit screen
-				styles.zIndex = 1;
+				styles.transform = 'scale(2)'  // TODO fit screen
+				styles.zIndex = 1
 			}
 			else if (this.transitioning) {
-				styles.zIndex = 1;
+				styles.zIndex = 1
 			}
-			return styles;
+			return styles
 		},
 
 		backgroundImageStyleUrl() {
 			if (this.image) {
-				return `url("./static/images/${this.image}")`;
+				return `url("./static/images/${this.image}")`
 			}
 			else {
-				return null;
+				return null
 			}
 		},
 	},
 
 	watch: {
 		open(newVal, oldVal) {
-			this.transitioning = true;
+			this.transitioning = true
 		},
 	},
 
 	methods: {
 		transitionend(event) {
-			this.transitioning = false;
+			this.transitioning = false
 		},
 	},
-};
+}
 </script>

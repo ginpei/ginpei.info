@@ -43,8 +43,8 @@
 </template>
 
 <script>
-const BaseLayout = require('../layouts/BaseLayout.vue');
-const Tile = require('../components/Tile.vue');
+const BaseLayout = require('../layouts/BaseLayout.vue')
+const Tile = require('../components/Tile.vue')
 
 module.exports = {
 	components: {
@@ -54,14 +54,14 @@ module.exports = {
 
 	computed: {
 		openingTile() {
-			return !!this.$route.query.tile
+			return Boolean(this.$route.query.tile)
 		},
 	},
 
 	methods: {
 		overlay_onclick(event) {
-			this.$router.push('/');
+			this.$router.push('/')
 		},
 	},
-};
+}
 </script>

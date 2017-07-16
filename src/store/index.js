@@ -1,10 +1,10 @@
-const Vue = require('vue');
-const Vuex = require('vuex');
+const Vue = require('vue')
+const Vuex = require('vuex')
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 module.exports = new Vuex.Store({
 	state: {
 		foo: 123,
 	},
-});
+})
