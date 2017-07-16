@@ -1,26 +1,26 @@
-<style scoped>
-.container {
-	margin: auto;
-	width: 300px;
-}
-.tile-container {
-}
-.overlay {
-	background-color: rgba(0,0,0,0.5);
-	height: 100%;
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
+<style lang="sass" scoped>
+.container
+	margin: auto
+	width: 300px
+
+.tile-container
+
+.overlay
+	background-color: rgba(0,0,0,0.5)
+	height: 100%
+	left: 0
+	position: fixed
+	top: 0
+	width: 100%
+
 .fade-enter-active,
-.fade-leave-active {
-  transition: opacity 300ms;
-}
+.fade-leave-active
+  transition: opacity 300ms
+
 .fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
+.fade-leave-to
+  opacity: 0
+
 </style>
 
 <template>
