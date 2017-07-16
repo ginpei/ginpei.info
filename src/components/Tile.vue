@@ -78,7 +78,7 @@ a[href^="http:"],
 a[href^="https:"],
 a[href^="mailto:"]
 	.title::after
-		content: " 🚀"
+		content: " 🚀"  // rocker emoji
 		display: inline-block
 		visibility: hidden
 	.tile:hover .title::after
