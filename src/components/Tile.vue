@@ -72,6 +72,17 @@
 .tile:hover .title
 	bottom: 0
 	left: 0
+
+// indicate external links
+a[href^="http:"],
+a[href^="https:"],
+a[href^="mailto:"]
+	.title::after
+		content: " 🚀"
+		display: inline-block
+		visibility: hidden
+	.tile:hover .title::after
+		visibility: visible
 </style>
 
 <template lang="pug">
