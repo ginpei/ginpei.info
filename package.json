@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "develop": "watchify -dv -t vueify -p browserify-hmr -e src/index.js -o build/app.js",
-    "postinstall": "mkdir build",
+    "postinstall": "mkdir build || echo No worries. :)",
     "start": "npm run develop -s"
   },
   "dependencies": {
