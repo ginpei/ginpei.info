@@ -58,15 +58,9 @@ module.exports = {
 		Tile,
 	},
 
-	data() {
-		return {
-			openingTile: false,
-		};
-	},
-
-	watch: {
-		'$route.query.tile' (newVal, oldVal) {
-			this.openingTile = !!newVal;
+	computed: {
+		openingTile() {
+			return !!this.$route.query.tile
 		},
 	},
 
