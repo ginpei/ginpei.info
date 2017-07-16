@@ -28,7 +28,7 @@
 	display: block
 	opacity: 0
 	transform: translateY(10px)
-	transition: transform 200ms, opacity 200ms
+	transition: transform 500ms, opacity 500ms
 
 	&--animating
 		opacity: 1
@@ -59,7 +59,7 @@ module.exports = {
 		this.$refs.tile.forEach((tile, index)=>{
 			tile.$el.classList.add('animationTile')
 
-			const interval = 10 * index
+			const interval = 50 * index
 			setTimeout(()=>{
 				tile.$el.classList.add('animationTile--animating')
 			}, interval)
