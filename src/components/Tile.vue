@@ -92,7 +92,7 @@ module.exports = {
 				classes[`tile--${this.size}`] = true
 			}
 
-			if (this.fillImage === 'yes') {
+			if (this.fillImage) {
 				classes['tile--fillImage'] = true
 			}
 

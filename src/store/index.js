@@ -37,7 +37,7 @@ module.exports = new Vuex.Store({
 				contents: [
 					{
 						color: 'white',
-						fillImage: 'yes',
+						fillImage: true,
 						image: 'javascript.png',
 						size: 'large',
 						title: 'JavaScript',
