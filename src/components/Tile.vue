@@ -54,10 +54,10 @@
 	left: 0
 </style>
 
-<template>
-	<div @transitionend="transitionend" :class="classes" :style="styles" class="tile">
-		<router-link :to="`/?tile=${this.title}`" class="title">{{title}}</router-link>
-	</div>
+<template lang="pug">
+	div(@transitionend="transitionend" :class="classes" :style="styles" class="tile")
+		router-link(:to="`/?tile=${this.title}`" class="title")
+			| {{title}}
 </template>
 
 <script>
