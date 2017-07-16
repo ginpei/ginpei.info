@@ -24,6 +24,15 @@
 .fade-leave-to
   opacity: 0
 
+.animationTile
+	display: block
+	opacity: 0
+	transform: translateY(10px)
+	transition: transform 200ms, opacity 200ms
+
+	&--animating
+		opacity: 1
+		transform: translateY(0)
 </style>
 
 <template lang="pug">
@@ -31,7 +40,7 @@
 		section.container(v-for="s in $store.state.homeContent")
 			h1.title {{s.title}}
 			div.tile-container
-				tile(v-for="t in s.contents" :tile="t")
+				tile(v-for="t in s.contents" :tile="t" ref="tile")
 		transition(name="fade")
 			div(@click="overlay_onclick" v-show="openingTile" class="overlay")
 </template>
@@ -44,6 +53,17 @@ module.exports = {
 	components: {
 		BaseLayout,
 		Tile,
+	},
+
+	mounted() {
+		this.$refs.tile.forEach((tile, index)=>{
+			tile.$el.classList.add('animationTile')
+
+			const interval = 10 * index
+			setTimeout(()=>{
+				tile.$el.classList.add('animationTile--animating')
+			}, interval)
+		})
 	},
 
 	computed: {
