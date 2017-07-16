@@ -83,11 +83,7 @@
 <script>
 module.exports = {
 	props: [
-		'color',
-		'fill-image',
-		'image',
-		'size',
-		'title',
+		'tile',
 	],
 
 	data() {
@@ -97,6 +93,22 @@ module.exports = {
 	},
 
 	computed: {
+		color() {
+			return this.tile.color
+		},
+		fillImage() {
+			return this.tile.fillImage
+		},
+		image() {
+			return this.tile.image
+		},
+		size() {
+			return this.tile.size
+		},
+		title() {
+			return this.tile.title
+		},
+
 		open() {
 			return this.$route.query.tile === this.title
 		},

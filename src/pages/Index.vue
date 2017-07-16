@@ -31,13 +31,7 @@
 		section.container(v-for="s in $store.state.homeContent")
 			h1.title {{s.title}}
 			div.tile-container
-				tile(v-for="t in s.contents"
-					:color="t.color"
-					:fillImage="t.fillImage"
-					:image="t.image"
-					:size="t.size"
-					:title="t.title"
-					)
+				tile(v-for="t in s.contents" :tile="t")
 		transition(name="fade")
 			div(@click="overlay_onclick" v-show="openingTile" class="overlay")
 </template>
