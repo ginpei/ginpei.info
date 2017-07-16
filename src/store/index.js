@@ -30,6 +30,7 @@ module.exports = new Vuex.Store({
 						url: 'https://ginpen.com/',
 					},
 					{
+						image: 'instagram.png',
 						size: 'wide',
 						title: 'Instagram',
 						url: 'https://instagram.com/ginpei/',
