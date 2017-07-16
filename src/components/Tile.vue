@@ -29,12 +29,26 @@
 	background-color: #fff
 	color: #006
 
+	.title
+		text-shadow: 1px 1px 0 #ccc
+
 .tile--light-grey
 	background-color: #f2f2f2
 	color: #006
 
+	.title
+		text-shadow: 1px 1px 0 #ccc
+
 .tile--brown
 	background-color: #b89f7a
+	color: #fff
+
+.tile--orange
+	background-color: #f7b36e
+	color: #fff
+
+.tile--light-blue
+	background-color: #6699cc
 	color: #fff
 
 .tile--large
@@ -50,8 +64,10 @@
 .title
 	bottom: var(--padding)
 	color: inherit
+	font-size: 14px
 	left: var(--padding)
 	position: absolute
+	text-shadow: 1px 1px 0 #666
 
 .tile:hover .title
 	bottom: 0

@@ -1,7 +1,10 @@
 <style lang="sass" scoped>
 .container
-	margin: auto
+	margin: 0 auto 2em
 	width: 300px
+
+.title
+	margin-bottom: 1em
 
 .tile-container
 
@@ -26,7 +29,7 @@
 <template lang="pug">
 	base-layout
 		section.container(v-for="s in $store.state.homeContent")
-			h1 {{s.title}}
+			h1.title {{s.title}}
 			div.tile-container
 				tile(v-for="t in s.contents"
 					:color="t.color"
