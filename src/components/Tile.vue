@@ -75,13 +75,19 @@
 </style>
 
 <template lang="pug">
-	router-link(:to="`/?tile=${this.title}`")
+	tile-link(:id="title" :url="url")
 		div(@transitionend="transitionend" :class="classes" :style="styles" class="tile")
 			span.title {{title}}
 </template>
 
 <script>
+const TileLink = require('./TileLink.vue')
+
 module.exports = {
+	components: {
+		TileLink,
+	},
+
 	props: [
 		'tile',
 	],
@@ -107,6 +113,9 @@ module.exports = {
 		},
 		title() {
 			return this.tile.title
+		},
+		url() {
+			return this.tile.url
 		},
 
 		open() {
