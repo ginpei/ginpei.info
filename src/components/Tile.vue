@@ -1,9 +1,9 @@
 <style lang="sass" scoped>
 $size: 100px
 $largeSize: $size * 2
-$padding: 2px
 $margin: 2px
 $borderWidth: 2px
+$padding: 2px
 $spaces: $margin + $borderWidth + $padding
 
 .tile
