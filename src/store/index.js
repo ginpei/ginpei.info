@@ -56,7 +56,7 @@ module.exports = new Vuex.Store({
 					{
 						color: 'light-grey',
 						id: 'backbonejs',
-						image: 'Backbone.svg',
+						image: 'backbone.svg',
 						title: 'Backbone.js',
 						url: 'http://backbonejs.org/',
 					},
