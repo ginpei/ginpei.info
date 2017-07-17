@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "browserify -t vueify -t [ babelify --presets [ es2015 ] ] -e src/index.js -o build/app.js",
+    "build": "browserify -t vueify -t [ babelify --presets [ es2015 ] ] -e src/index.js -o gh-pages/build/app.js && cp -r ./index.html ./CNAME ./static gh-pages",
     "develop": "watchify -dv -t vueify -p browserify-hmr -e src/index.js -o build/app.js",
     "lint": "eslint --ext js,vue src/",
     "postinstall": "mkdir build || echo No worries. :)",
