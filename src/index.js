@@ -1,3 +1,4 @@
+require('es6-promise/auto')  // just requiring is enough
 const Vue = require('vue')
 const App = require('./App.vue')
 const store = require('./store/index.js')
