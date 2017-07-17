@@ -93,14 +93,17 @@ a[href^="mailto:"]
 
 @keyframes rocket
 	0%
-		opacity: 1
+		opacity: 0
 		transform: translate(0, 0)
+	20%
+		opacity: 1
 	50%
 		transform: translate(0.5em, -0.5em)
-	70%
+	60%
 		opacity: 1
 	100%
 		opacity: 0
+		transform: translate(1em, -1em)
 </style>
 
 <template lang="pug">
