@@ -54,6 +54,14 @@ module.exports = new Vuex.Store({
 						title: 'JavaScript',
 					},
 					{
+						color: 'white',
+						fillImage: true,
+						id: 'vuejs',
+						image: 'vuejs.png',
+						title: 'Vue.js',
+						url: 'https://vuejs.org/',
+					},
+					{
 						color: 'light-grey',
 						id: 'backbonejs',
 						image: 'backbone.svg',
