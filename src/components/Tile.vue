@@ -4,7 +4,8 @@
 	--padding: 2px
 	--margin: 2px
 	--borderWidth: 2px
-	--length: calc(var(--size) - (var(--margin) + var(--borderWidth) + var(--padding)) * 2
+	--spaces: calc(var(--margin) + var(--borderWidth) + var(--padding))
+	--length: calc(var(--size) - var(--spaces) * 2)
 
 	background-color: #006
 	background-size: calc(var(--size) / 2)
@@ -61,7 +62,7 @@
 	--size: 200px
 
 .tile--wide
-	width: calc(var(--size) * 2 - (var(--margin) + var(--borderWidth) + var(--padding)) * 2
+	width: calc(var(--size) * 2 - var(--spaces) * 2
 
 .tile--fillImage
 	background-size: var(--size)
