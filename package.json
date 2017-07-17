@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "docker-compose run node bash -c \"NODE_ENV=production npm run build-exec\"",
-    "build-exec": "browserify -g envify -t vueify -t [ babelify --presets [ es2015 ] ] -e src/index.js -o gh-pages/build/app.js && cp -r ./index.html ./favicon.ico ./CNAME ./static gh-pages",
+    "build-exec": "browserify -g envify -t vueify -t [ babelify --presets [ es2015 ] ] -e src/index.js | uglifyjs > gh-pages/build/app.js && cp -r ./index.html ./favicon.ico ./CNAME ./static gh-pages",
     "develop": "watchify -dv -t vueify -p browserify-hmr -e src/index.js -o build/app.js",
     "lint": "eslint --ext js,vue src/",
     "postinstall": "mkdir build || echo No worries. :)",
@@ -17,6 +17,7 @@
     "es6-promise": "^4.1.1",
     "node-sass": "^4.5.3",
     "pug": "^2.0.0-rc.2",
+    "uglify-js": "^3.0.25",
     "vue": "^2.3.3",
     "vue-router": "^2.5.3",
     "vueify": "^9.4.1",
