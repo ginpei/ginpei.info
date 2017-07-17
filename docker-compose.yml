@@ -4,7 +4,6 @@ services:
 
   node:
     build: .
-    command: "bash -c 'NODE_ENV=production npm run build-exec'"
     volumes:
       - ./:/app/
       - ./node_modules.docker/:/app/node_modules/
