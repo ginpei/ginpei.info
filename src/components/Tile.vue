@@ -5,7 +5,6 @@ $padding: 2px
 $margin: 2px
 $borderWidth: 2px
 $spaces: $margin + $borderWidth + $padding
-$length: $size - $spaces * 2
 
 .tile
 	background-color: #006
