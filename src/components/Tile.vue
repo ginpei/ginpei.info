@@ -180,8 +180,9 @@ module.exports = {
 				backgroundImage: this.backgroundImageStyleUrl,
 			}
 			if (this.open) {
-				styles.transform = 'scale(2)'  // TODO fit screen
+				styles.transform = 'scale(1.2)'  // TODO fit screen
 				styles.zIndex = 1
+				styles.borderColor = 'transparent'
 			}
 			else if (this.transitioning) {
 				styles.zIndex = 1
