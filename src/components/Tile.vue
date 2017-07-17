@@ -23,15 +23,12 @@
 	transition: transform 300ms
 	width: var(--length)
 
-.tile:hover
-	border-color: rgba(255, 255, 255, 0.6)
+	&:hover
+		border-color: rgba(192,192,192,0.7)
 
 .tile--white
 	background-color: #fff
 	color: #006
-
-	&:hover
-		border-color: rgba(0, 0, 0, 0.3)
 
 	.title
 		text-shadow: 1px 1px 0 #ccc
@@ -39,9 +36,6 @@
 .tile--light-grey
 	background-color: #f2f2f2
 	color: #006
-
-	&:hover
-		border-color: rgba(0, 0, 0, 0.3)
 
 	.title
 		text-shadow: 1px 1px 0 #ccc
