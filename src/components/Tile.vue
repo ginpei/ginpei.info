@@ -26,40 +26,40 @@
 	&:hover
 		border-color: rgba(192,192,192,0.7)
 
-.tile--white
-	background-color: #fff
-	color: #006
+	&--white
+		background-color: #fff
+		color: #006
 
-	.title
-		text-shadow: 1px 1px 0 #ccc
+		.title
+			text-shadow: 1px 1px 0 #ccc
 
-.tile--light-grey
-	background-color: #f2f2f2
-	color: #006
+	&--light-grey
+		background-color: #f2f2f2
+		color: #006
 
-	.title
-		text-shadow: 1px 1px 0 #ccc
+		.title
+			text-shadow: 1px 1px 0 #ccc
 
-.tile--brown
-	background-color: #b89f7a
-	color: #fff
+	&--brown
+		background-color: #b89f7a
+		color: #fff
 
-.tile--orange
-	background-color: #f7b36e
-	color: #fff
+	&--orange
+		background-color: #f7b36e
+		color: #fff
 
-.tile--light-blue
-	background-color: #6699cc
-	color: #fff
+	&--light-blue
+		background-color: #6699cc
+		color: #fff
 
-.tile--large
-	--size: 200px
+	&--large
+		--size: 200px
 
-.tile--wide
-	width: calc(var(--size) * 2 - var(--spaces) * 2
+	&--wide
+		width: calc(var(--size) * 2 - var(--spaces) * 2
 
-.tile--fillImage
-	background-size: var(--size)
+	&--fillImage
+		background-size: var(--size)
 
 
 .title
