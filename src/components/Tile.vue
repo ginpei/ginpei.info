@@ -1,27 +1,28 @@
 <style lang="sass" scoped>
-.tile
-	--size: 100px
-	--padding: 2px
-	--margin: 2px
-	--borderWidth: 2px
-	--spaces: calc(var(--margin) + var(--borderWidth) + var(--padding))
-	--length: calc(var(--size) - var(--spaces) * 2)
+$size: 100px
+$largeSize: $size * 2
+$padding: 2px
+$margin: 2px
+$borderWidth: 2px
+$spaces: $margin + $borderWidth + $padding
+$length: $size - $spaces * 2
 
+.tile
 	background-color: #006
-	background-size: calc(var(--size) / 2)
+	background-size: $size / 2
 	background-repeat: no-repeat
 	background-position: center
 	border-color: transparent
 	border-style: solid
-	border-width: var(--borderWidth)
+	border-width: $borderWidth
 	color: #fff
 	float: left
-	height: var(--length)
-	margin: var(--margin)
-	padding: var(--padding)
+	height: $size - $spaces * 2
+	margin: $margin
+	padding: $padding
 	position: relative
 	transition: transform 300ms
-	width: var(--length)
+	width: $size - $spaces * 2
 
 	&:hover
 		border-color: rgba(192,192,192,0.7)
@@ -53,20 +54,25 @@
 		color: #fff
 
 	&--large
-		--size: 200px
+		background-size: $largeSize / 2
+		height: $largeSize - $spaces * 2
+		width: $largeSize - $spaces * 2
 
 	&--wide
-		width: calc(var(--size) * 2 - var(--spaces) * 2
+		width: $largeSize - $spaces * 2
 
 	&--fillImage
-		background-size: var(--size)
+		background-size: $size
+
+		&.tile--large
+			background-size: $largeSize
 
 
 .title
-	bottom: var(--padding)
+	bottom: $padding
 	color: inherit
 	font-size: 14px
-	left: var(--padding)
+	left: $padding
 	position: absolute
 	text-shadow: 1px 1px 0 #666
 
