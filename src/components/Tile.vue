@@ -109,7 +109,7 @@ a[href^="mailto:"]
 </style>
 
 <template lang="pug">
-	tile-link(:id="title" :url="url")
+	tile-link(:id="id" :url="url")
 		div(@transitionend="transitionend" :class="classes" :style="styles" class="tile")
 			span.title {{title}}
 </template>
@@ -139,6 +139,9 @@ module.exports = {
 		fillImage() {
 			return this.tile.fillImage
 		},
+		id() {
+			return this.tile.id
+		},
 		image() {
 			return this.tile.image
 		},
@@ -153,7 +156,7 @@ module.exports = {
 		},
 
 		open() {
-			return this.$route.query.tile === this.title
+			return this.$route.query.tile === this.id
 		},
 
 		classes() {
