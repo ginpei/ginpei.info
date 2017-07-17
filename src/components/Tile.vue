@@ -83,8 +83,29 @@ a[href^="mailto:"]
 		content: "🚀"  // rocker emoji
 		display: inline-block
 		visibility: hidden
-	.tile:hover .title::after
-		visibility: visible
+
+	.tile:hover
+		.title
+			text-decoration: underline
+
+		.title::after
+			animation: rocket 1s alternate
+			border-bottom-style: none
+			border-bottom-width: 0
+			opacity: 0
+			transform: translate(0.5em, -0.5em)
+			visibility: visible
+
+@keyframes rocket
+	0%
+		opacity: 1
+		transform: translate(0, 0)
+	50%
+		transform: translate(0.5em, -0.5em)
+	70%
+		opacity: 1
+	100%
+		opacity: 0
 </style>
 
 <template lang="pug">
